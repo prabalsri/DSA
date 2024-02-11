@@ -74,6 +74,8 @@ public class Main {
                         (List<List<Integer>>) Objects.requireNonNull(MainUtil.getListOfListInput(Integer.class,"Enter the beauties (row x col)->(stacks x plates): "))
                 ).maxBeauty()
         );
+
+        //Test commit
     }
 }
 
