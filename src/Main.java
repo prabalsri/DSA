@@ -75,7 +75,7 @@ public class Main {
                 ).maxBeauty()
         );
 
-        //Test commit
+
     }
 }
 
