@@ -1,3 +1,4 @@
+import partition.buysellstock.BuySellStockProblemMemoization;
 import partition.plates.PlatesProblemMemoization;
 import partition.plates.PlatesProblemTabulation;
 import twoddp.painthouse.PaintHouseProblemTabulationSuperSpaceOptimized;
@@ -67,12 +68,20 @@ public class Main {
 //                ).minimumCost()
 //        );
 
+//        System.out.printf(
+//                "Max beauty for given plates problem is -> %s. %n",
+//                new PlatesProblemTabulation(
+//                        (Integer) MainUtil.getInput(Integer.class, "Enter the max plate can be picked: "),
+//                        (List<List<Integer>>) Objects.requireNonNull(MainUtil.getListOfListInput(Integer.class,"Enter the beauties (row x col)->(stacks x plates): "))
+//                ).maxBeauty()
+//        );
+
         System.out.printf(
-                "Max beauty for given plates problem is -> %s. %n",
-                new PlatesProblemTabulation(
-                        (Integer) MainUtil.getInput(Integer.class, "Enter the max plate can be picked: "),
-                        (List<List<Integer>>) Objects.requireNonNull(MainUtil.getListOfListInput(Integer.class,"Enter the beauties (row x col)->(stacks x plates): "))
-                ).maxBeauty()
+                "Max profit for given Buy and Sell Stock problem is -> %s. %n",
+                new BuySellStockProblemMemoization(
+                        (Integer) MainUtil.getInput(Integer.class, "Enter the max transactions can be done: "),
+                        (List<Integer>) Objects.requireNonNull(MainUtil.getListInput(Integer.class,"Enter the prices (size=days): "))
+                ).maxProfit()
         );
 
 

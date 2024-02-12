@@ -8,6 +8,7 @@ import java.util.Objects;
 public class SubsetSumProblemWithMemoization implements SubsetSumProblem {
 
     private static final Boolean DEFAULT_VALUE = false;
+
     public Integer size;
 
     public List<Integer> subset;
