@@ -1,4 +1,5 @@
 import partition.buysellstock.BuySellStockProblemMemoization;
+import partition.buysellstock.BuySellStockProblemTabulation;
 import partition.plates.PlatesProblemMemoization;
 import partition.plates.PlatesProblemTabulation;
 import twoddp.painthouse.PaintHouseProblemTabulationSuperSpaceOptimized;
@@ -76,14 +77,21 @@ public class Main {
 //                ).maxBeauty()
 //        );
 
+//        System.out.printf(
+//                "Max profit for given Buy and Sell Stock problem is -> %s. %n",
+//                new BuySellStockProblemMemoization(
+//                        (Integer) MainUtil.getInput(Integer.class, "Enter the max transactions can be done: "),
+//                        (List<Integer>) Objects.requireNonNull(MainUtil.getListInput(Integer.class,"Enter the prices (size=days): "))
+//                ).maxProfit()
+//        );
+
         System.out.printf(
                 "Max profit for given Buy and Sell Stock problem is -> %s. %n",
-                new BuySellStockProblemMemoization(
+                new BuySellStockProblemTabulation(
                         (Integer) MainUtil.getInput(Integer.class, "Enter the max transactions can be done: "),
                         (List<Integer>) Objects.requireNonNull(MainUtil.getListInput(Integer.class,"Enter the prices (size=days): "))
                 ).maxProfit()
         );
-
 
     }
 }
