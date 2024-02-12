@@ -2,3 +2,4 @@ out
 .DS_Store
 .idea
 DSA.iml
+git_config-*.sh
