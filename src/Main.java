@@ -2,6 +2,7 @@ import partition.buysellstock.BuySellStockProblemMemoization;
 import partition.buysellstock.BuySellStockProblemTabulation;
 import partition.plates.PlatesProblemMemoization;
 import partition.plates.PlatesProblemTabulation;
+import partition.splitarrayminmaxsum.SplitArrayMinMaxSumMemoization;
 import twoddp.painthouse.PaintHouseProblemTabulationSuperSpaceOptimized;
 import util.MainUtil;
 
@@ -85,12 +86,20 @@ public class Main {
 //                ).maxProfit()
 //        );
 
+//        System.out.printf(
+//                "Max profit for given Buy and Sell Stock problem is -> %s. %n",
+//                new BuySellStockProblemTabulation(
+//                        (Integer) MainUtil.getInput(Integer.class, "Enter the max transactions can be done: "),
+//                        (List<Integer>) Objects.requireNonNull(MainUtil.getListInput(Integer.class,"Enter the prices (size=days): "))
+//                ).maxProfit()
+//        );
+
         System.out.printf(
-                "Max profit for given Buy and Sell Stock problem is -> %s. %n",
-                new BuySellStockProblemTabulation(
-                        (Integer) MainUtil.getInput(Integer.class, "Enter the max transactions can be done: "),
-                        (List<Integer>) Objects.requireNonNull(MainUtil.getListInput(Integer.class,"Enter the prices (size=days): "))
-                ).maxProfit()
+                "Min of largest sum for given Split Array Min Max Sum problem is -> %s. %n",
+                new SplitArrayMinMaxSumMemoization(
+                        (Integer) MainUtil.getInput(Integer.class, "Enter the splits to be done: "),
+                        (List<Integer>) Objects.requireNonNull(MainUtil.getListInput(Integer.class,"Enter the array: "))
+                ).minimize()
         );
 
     }
