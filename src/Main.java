@@ -1,16 +1,5 @@
-import combinatorics.tiling.TilingProblem1;
-import combinatorics.tiling.TilingProblem3;
-import combinatorics.tiling.TilingProblemAdvance;
-import partition.buysellstock.BuySellStockProblemMemoization;
-import partition.buysellstock.BuySellStockProblemTabulation;
-import partition.plates.PlatesProblemMemoization;
-import partition.plates.PlatesProblemTabulation;
-import partition.splitarrayminmaxsum.SplitArrayMinMaxSumMemoization;
-import twoddp.painthouse.PaintHouseProblemTabulationSuperSpaceOptimized;
+import combinatorics.pairingfriends.PairingFriendsProblem;
 import util.MainUtil;
-
-import java.util.List;
-import java.util.Objects;
 
 public class Main {
 
@@ -126,12 +115,19 @@ public class Main {
 //                ).countWays()
 //        );
 
-        System.out.printf(
-                "Total no. of ways in which we can fill a (3xwidth) board having (1x2, 2x1) tiles (Tiling Problem - Advance) is -> %s. %n",
-                new TilingProblemAdvance(
-                        (Integer) MainUtil.getInput(Integer.class, "Enter the width of board: ")
-                ).countWays()
-        );
+//        System.out.printf(
+//                "Total no. of ways in which we can fill a (3xwidth) board having (1x2, 2x1) tiles (Tiling Problem - Advance) is -> %s. %n",
+//                new TilingProblemAdvance(
+//                        (Integer) MainUtil.getInput(Integer.class, "Enter the width of board: ")
+//                ).countWays()
+//        );
+
+//        System.out.printf(
+//                "Total no. of ways in which n friends can be paired or remain single is -> %s. %n",
+//                new PairingFriendsProblem(
+//                        (Integer) MainUtil.getInput(Integer.class, "Enter the no. of friends: ")
+//                ).countWays()
+//        );
     }
 }
 
