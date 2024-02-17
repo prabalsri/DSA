@@ -1,3 +1,6 @@
+import combinatorics.tiling.TilingProblem1;
+import combinatorics.tiling.TilingProblem3;
+import combinatorics.tiling.TilingProblemAdvance;
 import partition.buysellstock.BuySellStockProblemMemoization;
 import partition.buysellstock.BuySellStockProblemTabulation;
 import partition.plates.PlatesProblemMemoization;
@@ -94,14 +97,41 @@ public class Main {
 //                ).maxProfit()
 //        );
 
-        System.out.printf(
-                "Min of largest sum for given Split Array Min Max Sum problem is -> %s. %n",
-                new SplitArrayMinMaxSumMemoization(
-                        (Integer) MainUtil.getInput(Integer.class, "Enter the splits to be done: "),
-                        (List<Integer>) Objects.requireNonNull(MainUtil.getListInput(Integer.class,"Enter the array: "))
-                ).minimize()
-        );
+//        System.out.printf(
+//                "Min of largest sum for given Split Array Min Max Sum problem is -> %s. %n",
+//                new SplitArrayMinMaxSumMemoization(
+//                        (Integer) MainUtil.getInput(Integer.class, "Enter the splits to be done: "),
+//                        (List<Integer>) Objects.requireNonNull(MainUtil.getListInput(Integer.class,"Enter the array: "))
+//                ).minimize()
+//        );
 
+//        System.out.printf(
+//                "Total no. of ways in which we can fill a (2xwidth) board having (1x2, 2x1) tiles (Tiling Problem - 1) is -> %s. %n",
+//                new TilingProblem1(
+//                        (Integer) MainUtil.getInput(Integer.class, "Enter the width of board: ")
+//                ).countWays()
+//        );
+//
+//        System.out.printf(
+//                "Total no. of ways in which we can fill a (2xwidth) board having (1x2, 2x1, 2x2) tiles (Tiling Problem - 2) is -> %s. %n",
+//                new TilingProblem1(
+//                        (Integer) MainUtil.getInput(Integer.class, "Enter the width of board: ")
+//                ).countWays()
+//        );
+
+//        System.out.printf(
+//                "Total no. of ways in which we can fill a (2xwidth) board having (1x2, 2x1, L-shaped) tiles (Tiling Problem - 3) is -> %s. %n",
+//                new TilingProblem3(
+//                        (Integer) MainUtil.getInput(Integer.class, "Enter the width of board: ")
+//                ).countWays()
+//        );
+
+        System.out.printf(
+                "Total no. of ways in which we can fill a (3xwidth) board having (1x2, 2x1) tiles (Tiling Problem - Advance) is -> %s. %n",
+                new TilingProblemAdvance(
+                        (Integer) MainUtil.getInput(Integer.class, "Enter the width of board: ")
+                ).countWays()
+        );
     }
 }
 
