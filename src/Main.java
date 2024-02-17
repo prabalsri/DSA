@@ -1,4 +1,7 @@
 import combinatorics.pairingfriends.PairingFriendsProblem;
+import combinatorics.partitionnpositiveintegers.PartitionNOrderedPairMemoized;
+import combinatorics.partitionnpositiveintegers.PartitionNOrderedPairTabulation;
+import combinatorics.partitionnpositiveintegers.PartitionNUnorderedPairMemoized;
 import util.MainUtil;
 
 public class Main {
@@ -128,6 +131,27 @@ public class Main {
 //                        (Integer) MainUtil.getInput(Integer.class, "Enter the no. of friends: ")
 //                ).countWays()
 //        );
+
+//        System.out.printf(
+//                "Total no. of ways in which N can be partitioned into positive integers is -> %s. %n",
+//                new PartitionNOrderedPairMemoized(
+//                        (Integer) MainUtil.getInput(Integer.class, "Enter N: ")
+//                ).countWays()
+//        );
+
+//        System.out.printf(
+//                "Total no. of ways in which N can be partitioned into positive integers is -> %s. %n",
+//                new PartitionNOrderedPairTabulation(
+//                        (Integer) MainUtil.getInput(Integer.class, "Enter N: ")
+//                ).countWays()
+//        );
+
+        System.out.printf(
+                "Total no. of ways in which N can be partitioned into positive integers is -> %s. %n",
+                new PartitionNUnorderedPairMemoized(
+                        (Integer) MainUtil.getInput(Integer.class, "Enter N: ")
+                ).countWays()
+        );
     }
 }
 
