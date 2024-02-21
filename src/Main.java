@@ -1,3 +1,4 @@
+import digitdp.DMagicNumberProblem;
 import digitdp.NumberAndDigitSumDivisibilityProblem;
 import digitdp.SumOfDigitsProblemMemoization;
 import util.MainUtil;
@@ -164,9 +165,19 @@ public class Main {
 //                ).sum()
 //        );
 
+//        System.out.printf(
+//                "Total number of numbers whose digit sum as well as the number itself divisible by it and lies between them is -> %s. %n",
+//                new NumberAndDigitSumDivisibilityProblem(
+//                        (String) MainUtil.getInput(String.class, "Enter From: "),
+//                        (String) MainUtil.getInput(String.class, "Enter Till: "),
+//                        (Integer) MainUtil.getInput(Integer.class, "Enter Divisor: ")
+//                ).checkDivisibility()
+//        );
+
         System.out.printf(
                 "Total number of numbers whose digit sum as well as the number itself divisible by it and lies between them is -> %s. %n",
-                new NumberAndDigitSumDivisibilityProblem(
+                new DMagicNumberProblem(
+                        (Integer) MainUtil.getInput(Integer.class, "Enter D-Magic: "),
                         (String) MainUtil.getInput(String.class, "Enter From: "),
                         (String) MainUtil.getInput(String.class, "Enter Till: "),
                         (Integer) MainUtil.getInput(Integer.class, "Enter Divisor: ")
