@@ -1,7 +1,5 @@
-import combinatorics.pairingfriends.PairingFriendsProblem;
-import combinatorics.partitionnpositiveintegers.PartitionNOrderedPairMemoized;
-import combinatorics.partitionnpositiveintegers.PartitionNOrderedPairTabulation;
-import combinatorics.partitionnpositiveintegers.PartitionNUnorderedPairMemoized;
+import digitdp.NumberAndDigitSumDivisibilityProblem;
+import digitdp.SumOfDigitsProblemMemoization;
 import util.MainUtil;
 
 public class Main {
@@ -146,12 +144,36 @@ public class Main {
 //                ).countWays()
 //        );
 
+//        System.out.printf(
+//                "Total no. of ways in which N can be partitioned into positive integers is -> %s. %n",
+//                new PartitionNUnorderedPairMemoized(
+//                        (Integer) MainUtil.getInput(Integer.class, "Enter N: ")
+//                ).countWays()
+//        );
+
+//        new DigitDPRecursion(
+//                (String) MainUtil.getInput(String.class, "Enter From: "),
+//                (String) MainUtil.getInput(String.class, "Enter Till: ")
+//        ).printAll();
+
+//        System.out.printf(
+//                "Sum of digits of all number lies between them is -> %s. %n",
+//                new SumOfDigitsProblemMemoization(
+//                        (String) MainUtil.getInput(String.class, "Enter From: "),
+//                        (String) MainUtil.getInput(String.class, "Enter Till: ")
+//                ).sum()
+//        );
+
         System.out.printf(
-                "Total no. of ways in which N can be partitioned into positive integers is -> %s. %n",
-                new PartitionNUnorderedPairMemoized(
-                        (Integer) MainUtil.getInput(Integer.class, "Enter N: ")
-                ).countWays()
+                "Total number of numbers whose digit sum as well as the number itself divisible by it and lies between them is -> %s. %n",
+                new NumberAndDigitSumDivisibilityProblem(
+                        (String) MainUtil.getInput(String.class, "Enter From: "),
+                        (String) MainUtil.getInput(String.class, "Enter Till: "),
+                        (Integer) MainUtil.getInput(Integer.class, "Enter Divisor: ")
+                ).checkDivisibility()
         );
+
+
     }
 }
 
