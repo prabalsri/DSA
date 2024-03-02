@@ -69,4 +69,27 @@ public class MainUtil {
         }
         return null;
     }
+
+    public static Object getAdjacencyList(String message) {
+
+        System.out.println(message);
+        List<List<Integer>> graph = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        Integer nodes = (Integer) getInput(Integer.class, "Enter the number of Nodes: ");
+        for (int i = 0; i <= nodes; i++) {
+            graph.add(new ArrayList<>());
+        }
+        Integer edges = (Integer) getInput(Integer.class, "Enter the number of Edges: ");
+        for (int i = 0; i < edges; i++) {
+            String edge = (String) getInput(String.class, "Enter the Edge (u,v): ");
+            int u = Integer.parseInt(edge.split(",")[0]);
+            int v = Integer.parseInt(edge.split(",")[1]);
+
+            graph.get(u).add(v);
+            graph.get(v).add(u);
+        }
+
+        return graph;
+
+    }
 }

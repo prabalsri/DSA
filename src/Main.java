@@ -1,7 +1,8 @@
-import digitdp.DMagicNumberProblem;
-import digitdp.NumberAndDigitSumDivisibilityProblem;
-import digitdp.SumOfDigitsProblemMemoization;
+import treedp.vertexcover.VertexCoverProblemDFS;
+import treedp.vertexcover.VertexCoverProblemMemoization;
 import util.MainUtil;
+
+import java.util.List;
 
 public class Main {
 
@@ -174,14 +175,28 @@ public class Main {
 //                ).checkDivisibility()
 //        );
 
+//        System.out.printf(
+//                "Total number of numbers whose digit sum as well as the number itself divisible by it and lies between them is -> %s. %n",
+//                new DMagicNumberProblem(
+//                        (Integer) MainUtil.getInput(Integer.class, "Enter D-Magic: "),
+//                        (String) MainUtil.getInput(String.class, "Enter From: "),
+//                        (String) MainUtil.getInput(String.class, "Enter Till: "),
+//                        (Integer) MainUtil.getInput(Integer.class, "Enter Divisor: ")
+//                ).checkDivisibility()
+//        );
+
+//        System.out.printf(
+//                "Size of minimal cover set of vertices which covers all the edges of the given graph is -> %s. %n",
+//                new VertexCoverProblemMemoization(
+//                        (List<List<Integer>>) MainUtil.getAdjacencyList("SUBMIT THE GRAPH")
+//                ).minCoverSize()
+//        );
+
         System.out.printf(
-                "Total number of numbers whose digit sum as well as the number itself divisible by it and lies between them is -> %s. %n",
-                new DMagicNumberProblem(
-                        (Integer) MainUtil.getInput(Integer.class, "Enter D-Magic: "),
-                        (String) MainUtil.getInput(String.class, "Enter From: "),
-                        (String) MainUtil.getInput(String.class, "Enter Till: "),
-                        (Integer) MainUtil.getInput(Integer.class, "Enter Divisor: ")
-                ).checkDivisibility()
+                "Size of minimal cover set of vertices which covers all the edges of the given graph is -> %s. %n",
+                new VertexCoverProblemDFS(
+                        (List<List<Integer>>) MainUtil.getAdjacencyList("SUBMIT THE GRAPH")
+                ).minCoverSize()
         );
 
 
