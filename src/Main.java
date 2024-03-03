@@ -1,3 +1,4 @@
+import treedp.treediameter.TreeDiameterProblemDFS;
 import treedp.vertexcover.VertexCoverProblemDFS;
 import treedp.vertexcover.VertexCoverProblemMemoization;
 import util.MainUtil;
@@ -192,11 +193,18 @@ public class Main {
 //                ).minCoverSize()
 //        );
 
+//        System.out.printf(
+//                "Size of minimal cover set of vertices which covers all the edges of the given graph is -> %s. %n",
+//                new VertexCoverProblemDFS(
+//                        (List<List<Integer>>) MainUtil.getAdjacencyList("SUBMIT THE GRAPH")
+//                ).minCoverSize()
+//        );
+
         System.out.printf(
-                "Size of minimal cover set of vertices which covers all the edges of the given graph is -> %s. %n",
-                new VertexCoverProblemDFS(
+                "Diameter of the given graph is -> %s. %n",
+                new TreeDiameterProblemDFS(
                         (List<List<Integer>>) MainUtil.getAdjacencyList("SUBMIT THE GRAPH")
-                ).minCoverSize()
+                ).getDiameter()
         );
 
 
